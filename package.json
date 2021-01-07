@@ -2,12 +2,17 @@
   "name": "angular-app",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
+  },
+  "engines":{
+    "node": "12.19.0",
+    "npm": "6.14.10",
   },
   "private": true,
   "dependencies": {
@@ -26,12 +31,16 @@
     "bootstrap": "^4.5.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "@angular/cli": "^11.0.6",
+    "@angular/compiler-cli": "~11.0.5",
+    "typescript": "~4.0.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1100.5",
-    "@angular/cli": "~11.0.5",
+    "@angular/cli": "^11.0.6",
     "@angular/compiler-cli": "~11.0.5",
+    "typescript": "~4.0.2",
+    "@angular-devkit/build-angular": "~0.1100.5",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
@@ -45,6 +54,5 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
   }
 }
